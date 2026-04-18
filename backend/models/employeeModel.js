@@ -56,10 +56,19 @@ const deleteEmployee = async (id) => {
     }
 };
 
+const deactivateEmployee = async (id) =>{
+    try{
+        await pool.query('UPDATE employees SET employee_status = 0 WHERE employee_id = $1 ',[id]);
+    }catch(error){
+        throw error;
+    }
+};
+
 module.exports = {
     getEmployees,
     createEmployee,
     updateEmployee,
     getEmployeeById,
-    deleteEmployee
+    deleteEmployee,
+    deactivateEmployee
 }

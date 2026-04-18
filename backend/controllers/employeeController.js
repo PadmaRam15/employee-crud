@@ -61,3 +61,15 @@ exports.deleteEmployee = async (req, res) => {
         res.status(500).json({error:error.message});
     }
 }
+
+
+//DEACTIVATE an employee
+exports.deactivateEmployee = async(req,res)=>{
+    try{
+        const id = req.params.id;
+        await employeeModel.deactivateEmployee(id);
+        res.json({message:'Employee Deactivated Successfully'});
+    }catch(error){
+        res.status(500).json({error:error.message});
+    }
+}
