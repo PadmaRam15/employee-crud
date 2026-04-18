@@ -14,6 +14,7 @@ CREATE TABLE employees(
     employee_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
 -- Function for auto update timestamp
 
 CREATE OR REPLACE FUNCTION update_timestamp()

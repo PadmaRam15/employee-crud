@@ -11,7 +11,6 @@ const getEmployees = async () => {
     }
 };
 
-
 // CREATE a new employee
 const createEmployee = async (employee) => {
      const {name,email,phone} = employee;

@@ -11,6 +11,7 @@ exports.getAllEmployees = async (req, res) => {
     }
 }
 
+
 // CREATE a new employee
 exports.addEmployee = async (req, res) => {
     try{
@@ -21,6 +22,7 @@ exports.addEmployee = async (req, res) => {
         res.status(500).json({error:error.message});
     }
 }
+
 
 //UPDATE an employee
 exports.updateEmployee = async (req, res) => {
